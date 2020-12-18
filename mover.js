@@ -5,7 +5,8 @@ class Mover {
         this.m = m;
         this.position = createVector(this.x, this.y);
         // this.pos = createVector(this.x, this.y);
-        this.vel = createVector(1.2, 0);
+        this.vel = createVector(1.3, 0);
+        // this.vel = createVector(1, 0);
         this.acc = createVector(0, 0);
         this.radius = this.m * 4;
     }
@@ -18,12 +19,13 @@ class Mover {
         this.acc.setMag(0);
     }
 
-    show() {
+    show(clr, size) {
+        if (size == null) { size = 1; }
         ellipseMode(CENTER);
-        stroke(0);
+        stroke(clr);
         strokeWeight(1);
-        fill('green');
-        circle(this.position.x, this.position.y, this.radius);
+        fill(clr);
+        circle(this.position.x, this.position.y, this.radius * size);
         // circle(this.pos.x, this.pos.y, this.radius);
     }
 

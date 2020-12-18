@@ -15,11 +15,11 @@ function draw() {
     // background(220);
     background(220, 5);
     mover1.update();
-    mover1.show();
+    mover1.show('tan', 0.5);
     mover2.update();
-    mover2.show();
+    mover2.show('black', 0.5);
 
     attractor.attract(mover1);
     attractor.attract(mover2);
-    attractor.show();
+    attractor.show('orange', .5);
 }

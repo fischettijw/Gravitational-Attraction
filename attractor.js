@@ -3,7 +3,7 @@ class Attractor {
         this.position = createVector(x, y);
         this.m = m;
         this.radius = this.m * 4;
-        this.G = 1; // this.G = 100;
+        this.G = 3; // this.G = 100;
     }
 
     attract(mover) {
@@ -16,11 +16,12 @@ class Attractor {
         mover.applyForce(force);
     }
 
-    show() {
+    show(clr, size) {
+        if (size == null) { size = 1; }
         ellipseMode(CENTER);
-        stroke(0);
+        stroke(clr);
         strokeWeight(4);
-        fill('red');
-        circle(this.position.x, this.position.y, this.radius);
+        fill(clr);
+        circle(this.position.x, this.position.y, this.radius * size);
     }
 }
