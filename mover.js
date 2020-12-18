@@ -25,7 +25,6 @@ class Mover {
         fill('green');
         circle(this.position.x, this.position.y, this.radius);
         // circle(this.pos.x, this.pos.y, this.radius);
-
     }
 
     applyForce(force) {

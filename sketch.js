@@ -3,8 +3,8 @@ let attractor;
 
 
 function setup() {
-    createCanvas(500, 600); // createCanvas(500, 500);
-    mover1 = new Mover(175, 175, 5); // mover1 = new Mover(50, 350, 5);
+    createCanvas(500, 500);
+    mover1 = new Mover(175, 125, 5); // mover1 = new Mover(50, 350, 5);
     attractor = new Attractor(width / 2, height / 2, 20);
     background(220);
 }
