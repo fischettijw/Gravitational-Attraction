@@ -5,7 +5,7 @@ class Mover {
         this.m = m;
         this.position = createVector(this.x, this.y);
         // this.pos = createVector(this.x, this.y);
-        this.vel = createVector(1.4, 0);
+        this.vel = createVector(.1, 0);
         // this.vel = createVector(1, 0);
         this.acc = createVector(0, 0);
         this.radius = this.m * 4;
