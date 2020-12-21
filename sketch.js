@@ -1,6 +1,7 @@
 let mover1;
 let mover2;
 let attractor;
+let batch = 30;
 
 
 function setup() {
@@ -14,12 +15,16 @@ function setup() {
 function draw() {
     // background(220);
     background(220, 10);
-    mover1.update();
-    mover1.show('yellow', 0.5);
-    mover2.update();
-    mover2.show('cyan', 0.5);
 
-    attractor.attract(mover1);
-    attractor.attract(mover2);
-    attractor.show('red', .4);
+    for (i = 0; i < batch; i++) {
+
+        mover1.update();
+        mover1.show('yellow', 0.5);
+        mover2.update();
+        mover2.show('cyan', 0.5);
+
+        attractor.attract(mover1);
+        attractor.attract(mover2);
+        attractor.show('red', .4);
+    }
 }
