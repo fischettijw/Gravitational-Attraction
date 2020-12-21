@@ -19,7 +19,7 @@ class Attractor {
     show(clr, size) {
         if (size == null) { size = 1; }
         ellipseMode(CENTER);
-        stroke('black');
+        stroke(clr);
         strokeWeight(2);
         fill(clr);
         circle(this.position.x, this.position.y, this.radius * size);

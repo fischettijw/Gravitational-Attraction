@@ -13,11 +13,11 @@ function setup() {
 
 function draw() {
     // background(220);
-    background(220, 5);
+    background(220, 10);
     mover1.update();
-    mover1.show('yellow', .5);
+    mover1.show('yellow', 0.5);
     mover2.update();
-    mover2.show('green', 0.5);
+    mover2.show('cyan', 0.5);
 
     attractor.attract(mover1);
     attractor.attract(mover2);
