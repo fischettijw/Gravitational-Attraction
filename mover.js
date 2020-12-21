@@ -3,9 +3,9 @@ class Mover {
         this.x = x;
         this.y = y;
         this.m = m;
-        this.position = createVector(this.x, this.y);
-        // this.pos = createVector(this.x, this.y);
-        this.vel = createVector(.1, 0);
+        // this.position = createVector(this.x, this.y);
+        this.pos = createVector(this.x, this.y);
+        this.vel = createVector(.2, 0);
         // this.vel = createVector(1, 0);
         this.acc = createVector(0, 0);
         this.radius = this.m * 4;
@@ -13,8 +13,8 @@ class Mover {
 
     update() {
         this.vel.add(this.acc);
-        this.position.add(this.vel);
-        // this.pos.add(this.vel);
+        // this.position.add(this.vel);
+        this.pos.add(this.vel);
         // this.acc.mult(0);
         this.acc.setMag(0);
     }
@@ -25,8 +25,8 @@ class Mover {
         stroke('black');
         strokeWeight(1);
         fill(clr);
-        circle(this.position.x, this.position.y, this.radius * size);
-        // circle(this.pos.x, this.pos.y, this.radius);
+        // circle(this.position.x, this.position.y, this.radius * size);
+        circle(this.pos.x, this.pos.y, this.radius * size);
     }
 
     applyForce(force) {

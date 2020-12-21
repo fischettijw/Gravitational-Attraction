@@ -7,7 +7,7 @@ class Attractor {
     }
 
     attract(mover) {
-        let force = p5.Vector.sub(this.position, mover.position);
+        let force = p5.Vector.sub(this.position, mover.pos);
         let distance = force.mag();
         // distance = constrain(distance, 5, 50);
         let gForce = (this.G * this.m * mover.m) / (distance * distance);
@@ -19,8 +19,8 @@ class Attractor {
     show(clr, size) {
         if (size == null) { size = 1; }
         ellipseMode(CENTER);
-        stroke(clr);
-        strokeWeight(4);
+        stroke('black');
+        strokeWeight(2);
         fill(clr);
         circle(this.position.x, this.position.y, this.radius * size);
     }
